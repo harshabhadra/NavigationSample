@@ -72,7 +72,6 @@ class HomeFragment : Fragment(), TextWatcher {
         }
 
         //Set Text Watcher to EditText to Save values from it to shared preference when text changes
-        et.addTextChangedListener(this)
 
         return root
     }
@@ -95,6 +94,7 @@ class HomeFragment : Fragment(), TextWatcher {
             et.id = numberOfLines + 1
             ll.addView(et)
             numberOfLines++
+            et.addTextChangedListener(this)
         }
     }
 
